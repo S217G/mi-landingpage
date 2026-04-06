@@ -1,9 +1,9 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
 export default defineConfig({
-    site: 'https://S217G.github.io',
-    base: '/mi-landingpage',
+  site: 'https://S217G.github.io',
+  base: '/mi-landingpage',
+  integrations: [tailwind()]
 });
 
