@@ -1,45 +1,77 @@
 
+
 <html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>SmartParking UBB</title>
   </head>
-  <body style="font-family: system-ui, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px;">
+  <body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
     
-    <header style="text-align: center; margin-bottom: 40px;">
-      <h1>Gestión y Predicción de Ocupación Vehicular</h1>
-      <p style="font-size: 1.2rem; color: #555;">
-        Optimizando la movilidad en la Universidad del Bío-Bío mediante Visión Computacional y Edge Computing[cite: 37].
-      </p>
+    <header class="bg-blue-900 text-white py-20 px-6 text-center shadow-md">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          Gestión y Predicción de Ocupación Vehicular
+        </h1>
+        <p class="text-xl text-blue-200">
+          Optimizando la movilidad en la Universidad del Bío-Bío mediante Visión Computacional y Edge Computing.
+        </p>
+      </div>
     </header>
 
-    <main>
-      <section style="margin-bottom: 40px;">
-        <h2 style="color: #d94514;">El Problema</h2>
-        <p>Actualmente, el proceso de búsqueda de estacionamientos en el campus Concepción se realiza de forma manual y visual[cite: 49, 51]. Esto genera inconvenientes críticos:</p>
-        <ul>
-          <li><strong>Congestión vehicular:</strong> Embotellamientos internos en horarios punta debido a vehículos circulando a baja velocidad[cite: 59].</li>
-          <li><strong>Pérdida de tiempo:</strong> Usuarios invierten tiempo valioso recorriendo sectores, resultando en atrasos académicos o laborales[cite: 60].</li>
-          <li><strong>Falta de métricas:</strong> La administración carece de datos históricos o en tiempo real para una gestión eficiente del espacio[cite: 61].</li>
+    <main class="flex-grow max-w-5xl mx-auto px-6 py-12 grid gap-12 md:grid-cols-2">
+      
+      <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <h2 class="text-2xl font-bold text-red-600 mb-4 flex items-center">
+          <span class="mr-2">⚠️</span> El Problema
+        </h2>
+        <p class="mb-4 text-gray-600">Actualmente, el proceso de búsqueda de estacionamientos en el campus Concepción se realiza de forma manual y visual. Esto genera:</p>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-red-500 mr-2">▪</span>
+            <span><strong>Congestión vehicular:</strong> Embotellamientos internos en horarios punta debido a vehículos circulando a baja velocidad.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-red-500 mr-2">▪</span>
+            <span><strong>Pérdida de tiempo:</strong> Usuarios invierten tiempo valioso recorriendo sectores, resultando en atrasos.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-red-500 mr-2">▪</span>
+            <span><strong>Falta de métricas:</strong> La administración carece de datos históricos o en tiempo real para la gestión.</span>
+          </li>
         </ul>
       </section>
 
-      <section style="margin-bottom: 40px;">
-        <h2 style="color: #0056b3;">Nuestra Solución</h2>
-        <p>Un Sistema de Información Distribuido que informa la disponibilidad en tiempo real y proyecta el nivel de ocupación futura[cite: 66, 67]. El sistema opera sobre tres pilares tecnológicos:</p>
-        <ul>
-          <li><strong>Edge Computing & Visión Computacional:</strong> Nodos locales capturan imágenes e identifican espacios usando modelos como YOLO, enviando solo texto al servidor para no saturar la red[cite: 69, 74, 75].</li>
-          <li><strong>Análisis Predictivo:</strong> Un motor de Machine Learning analiza el historial para calcular tendencias y probabilidades de disponibilidad futura[cite: 78, 79].</li>
-          <li><strong>Plataforma Web Responsiva:</strong> Una interfaz Mobile-First centralizada donde los usuarios pueden ver un mapa interactivo y consultar la disponibilidad según su hora de llegada[cite: 80, 81, 82].</li>
+      <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+        <h2 class="text-2xl font-bold text-blue-700 mb-4 flex items-center">
+          <span class="mr-2">💡</span> Nuestra Solución
+        </h2>
+        <p class="mb-4 text-gray-600">Un Sistema de Información Distribuido que informa la disponibilidad en tiempo real y proyecta la ocupación.</p>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <span class="text-blue-500 mr-2">✓</span>
+            <span><strong>Edge Computing & Visión Computacional:</strong> Nodos locales capturan imágenes e identifican espacios usando modelos como YOLO.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-500 mr-2">✓</span>
+            <span><strong>Análisis Predictivo:</strong> Motor de Machine Learning que calcula probabilidades de disponibilidad futura.</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-blue-500 mr-2">✓</span>
+            <span><strong>Plataforma Web Responsiva:</strong> Interfaz Mobile-First para ver el mapa interactivo y consultar disponibilidad.</span>
+          </li>
         </ul>
       </section>
 
-      <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #ccc; text-align: center; font-size: 0.9rem; color: #666;">
-        <p>Proyecto desarrollado por Sergio Guzmán y Walter Meza[cite: 10, 19].</p>
-        <p>Ingeniería En Ejecución En Computación E Informática - Facultad de Ciencias Empresariales[cite: 4, 5].</p>
-      </footer>
     </main>
+
+    <footer class="bg-gray-800 text-gray-400 py-8 text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <p class="mb-2 font-medium text-gray-300">Proyecto desarrollado por Sergio Guzmán y Walter Meza.</p>
+        <p class="text-sm">Ingeniería En Ejecución En Computación E Informática [cite: 16, 24] - Facultad de Ciencias Empresariales.</p>
+        <p class="text-sm mt-2">Universidad del Bío-Bío.</p>
+      </div>
+    </footer>
 
   </body>
 </html>
