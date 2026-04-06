@@ -1,11 +1,45 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
----
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>SmartParking UBB</title>
+  </head>
+  <body style="font-family: system-ui, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px;">
+    
+    <header style="text-align: center; margin-bottom: 40px;">
+      <h1>Gestión y Predicción de Ocupación Vehicular</h1>
+      <p style="font-size: 1.2rem; color: #555;">
+        Optimizando la movilidad en la Universidad del Bío-Bío mediante Visión Computacional y Edge Computing[cite: 37].
+      </p>
+    </header>
 
-<Layout>
-	<Welcome />
-</Layout>
+    <main>
+      <section style="margin-bottom: 40px;">
+        <h2 style="color: #d94514;">El Problema</h2>
+        <p>Actualmente, el proceso de búsqueda de estacionamientos en el campus Concepción se realiza de forma manual y visual[cite: 49, 51]. Esto genera inconvenientes críticos:</p>
+        <ul>
+          <li><strong>Congestión vehicular:</strong> Embotellamientos internos en horarios punta debido a vehículos circulando a baja velocidad[cite: 59].</li>
+          <li><strong>Pérdida de tiempo:</strong> Usuarios invierten tiempo valioso recorriendo sectores, resultando en atrasos académicos o laborales[cite: 60].</li>
+          <li><strong>Falta de métricas:</strong> La administración carece de datos históricos o en tiempo real para una gestión eficiente del espacio[cite: 61].</li>
+        </ul>
+      </section>
+
+      <section style="margin-bottom: 40px;">
+        <h2 style="color: #0056b3;">Nuestra Solución</h2>
+        <p>Un Sistema de Información Distribuido que informa la disponibilidad en tiempo real y proyecta el nivel de ocupación futura[cite: 66, 67]. El sistema opera sobre tres pilares tecnológicos:</p>
+        <ul>
+          <li><strong>Edge Computing & Visión Computacional:</strong> Nodos locales capturan imágenes e identifican espacios usando modelos como YOLO, enviando solo texto al servidor para no saturar la red[cite: 69, 74, 75].</li>
+          <li><strong>Análisis Predictivo:</strong> Un motor de Machine Learning analiza el historial para calcular tendencias y probabilidades de disponibilidad futura[cite: 78, 79].</li>
+          <li><strong>Plataforma Web Responsiva:</strong> Una interfaz Mobile-First centralizada donde los usuarios pueden ver un mapa interactivo y consultar la disponibilidad según su hora de llegada[cite: 80, 81, 82].</li>
+        </ul>
+      </section>
+
+      <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #ccc; text-align: center; font-size: 0.9rem; color: #666;">
+        <p>Proyecto desarrollado por Sergio Guzmán y Walter Meza[cite: 10, 19].</p>
+        <p>Ingeniería En Ejecución En Computación E Informática - Facultad de Ciencias Empresariales[cite: 4, 5].</p>
+      </footer>
+    </main>
+
+  </body>
+</html>
