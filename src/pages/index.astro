@@ -1,77 +1,160 @@
-
+---
+// src/pages/index.astro
+---
 
 <html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>SmartParking UBB</title>
+    <title>SmartParking UBB | Visión Computacional</title>
   </head>
-  <body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
-    
-    <header class="bg-blue-900 text-white py-20 px-6 text-center shadow-md">
-      <div class="max-w-4xl mx-auto">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
-          Gestión y Predicción de Ocupación Vehicular
+  <body class="bg-black text-gray-200 font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+    <header class="relative w-full h-[90vh] flex flex-col justify-end pb-24 bg-[url('/mi-landingpage/estacionamiento.png')] bg-cover bg-center bg-no-repeat">
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/20"></div>
+      
+      <div class="absolute top-0 left-0 w-full p-6 md:p-10 z-50 flex items-center">
+        <img src="/mi-landingpage/logo.png" alt="Logo UBB" class="h-20 md:h-24 w-auto mr-6 drop-shadow-lg" />
+        <span class="text-blue-500 font-extrabold text-lg md:text-2xl tracking-wide drop-shadow-md">
+          Universidad del Bío-Bío
+        </span>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
+        <h2 class="text-blue-500 font-bold tracking-[0.2em] uppercase text-sm mb-4">Proyecto de Título</h2>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight max-w-4xl">
+          SISTEMA DE GESTIÓN Y <br/> PREDICCIÓN VEHICULAR.
         </h1>
-        <p class="text-xl text-blue-200">
-          Optimizando la movilidad en la Universidad del Bío-Bío mediante Visión Computacional y Edge Computing.
+        <p class="text-xl md:text-2xl text-gray-400 font-light max-w-3xl leading-relaxed">
+          Implementación de una arquitectura distribuida para el monitoreo de disponibilidad en el Campus Concepción mediante Visión Computacional.
         </p>
       </div>
     </header>
 
-    <main class="flex-grow max-w-5xl mx-auto px-6 py-12 grid gap-12 md:grid-cols-2">
+    <section class="relative max-w-7xl mx-auto px-6 md:px-12 w-full pt-32 pb-32">
       
-      <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-        <h2 class="text-2xl font-bold text-red-600 mb-4 flex items-center">
-          <span class="mr-2">⚠️</span> El Problema
+      <div class="mb-16 max-w-3xl">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          ANÁLISIS DE LA PROBLEMÁTICA
         </h2>
-        <p class="mb-4 text-gray-600">Actualmente, el proceso de búsqueda de estacionamientos en el campus Concepción se realiza de forma manual y visual. Esto genera:</p>
-        <ul class="space-y-3">
-          <li class="flex items-start">
-            <span class="text-red-500 mr-2">▪</span>
-            <span><strong>Congestión vehicular:</strong> Embotellamientos internos en horarios punta debido a vehículos circulando a baja velocidad.</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-red-500 mr-2">▪</span>
-            <span><strong>Pérdida de tiempo:</strong> Usuarios invierten tiempo valioso recorriendo sectores, resultando en atrasos.</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-red-500 mr-2">▪</span>
-            <span><strong>Falta de métricas:</strong> La administración carece de datos históricos o en tiempo real para la gestión.</span>
-          </li>
-        </ul>
-      </section>
+        <p class="text-xl text-gray-400 font-light leading-relaxed">
+          El proceso tradicional de búsqueda de estacionamientos depende exclusivamente de la inspección visual directa. Esta falta de información centralizada produce tiempos de circulación prolongados, afectando la movilidad interna.
+        </p>
+      </div>
 
-      <section class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-        <h2 class="text-2xl font-bold text-blue-700 mb-4 flex items-center">
-          <span class="mr-2">💡</span> Nuestra Solución
-        </h2>
-        <p class="mb-4 text-gray-600">Un Sistema de Información Distribuido que informa la disponibilidad en tiempo real y proyecta la ocupación.</p>
-        <ul class="space-y-3">
-          <li class="flex items-start">
-            <span class="text-blue-500 mr-2">✓</span>
-            <span><strong>Edge Computing & Visión Computacional:</strong> Nodos locales capturan imágenes e identifican espacios usando modelos como YOLO.</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-blue-500 mr-2">✓</span>
-            <span><strong>Análisis Predictivo:</strong> Motor de Machine Learning que calcula probabilidades de disponibilidad futura.</span>
-          </li>
-          <li class="flex items-start">
-            <span class="text-blue-500 mr-2">✓</span>
-            <span><strong>Plataforma Web Responsiva:</strong> Interfaz Mobile-First para ver el mapa interactivo y consultar disponibilidad.</span>
-          </li>
-        </ul>
-      </section>
+      <div class="flex flex-col lg:flex-row gap-16 relative">
+        
+        <div class="lg:w-1/2 w-full">
+          
+          <div class="step-item transition-opacity duration-500 min-h-[60vh] flex flex-col justify-center border-l-2 border-red-500 pl-8" data-target="img-congestion">
+            <h3 class="text-white font-bold text-3xl mb-4">CONGESTIÓN INTERNA</h3>
+            <p class="text-gray-400 text-xl leading-relaxed">
+              Aumento del tráfico a baja velocidad por vehículos en <span class="text-white font-semibold">búsqueda activa</span>. Las filas de espera bloquean los accesos principales del campus durante los horarios punta.
+            </p>
+          </div>
+          
+          <div class="step-item opacity-30 transition-opacity duration-500 min-h-[60vh] flex flex-col justify-center border-l-2 border-yellow-500 pl-8" data-target="img-tiempo">
+            <h3 class="text-white font-bold text-3xl mb-4">IMPACTO EN TIEMPOS</h3>
+            <p class="text-gray-400 text-xl leading-relaxed">
+              <span class="text-white font-semibold">Retrasos significativos</span> que afectan directamente la jornada académica y laboral de los usuarios, generando estrés y reduciendo la productividad.
+            </p>
+          </div>
+          
+          <div class="step-item opacity-30 transition-opacity duration-500 min-h-[60vh] flex flex-col justify-center border-l-2 border-blue-500 pl-8" data-target="img-datos">
+            <h3 class="text-white font-bold text-3xl mb-4">AUSENCIA DE DATOS</h3>
+            <p class="text-gray-400 text-xl leading-relaxed">
+              Carencia de métricas históricas y en tiempo real. La administración se encuentra a ciegas para la <span class="text-white font-semibold">optimización del espacio</span> y la toma de decisiones.
+            </p>
+          </div>
+        </div>
 
-    </main>
+        <div class="hidden lg:block lg:w-1/2">
+          <div class="sticky top-32 h-[60vh] w-full rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.5)] border border-gray-800 bg-gray-900">
+            
+            <img id="img-congestion" class="sticky-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100" src="/mi-landingpage/congestion.jpg" alt="Congestión Vehicular" />
+            
+            <img id="img-tiempo" class="sticky-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" src="/mi-landingpage/tiempo.png" alt="Impacto en Tiempos" />
+            
+            <img id="img-datos" class="sticky-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" src="/mi-landingpage/datos.png" alt="Ausencia de Datos" />
+            
+            <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
+          </div>
+        </div>
 
-    <footer class="bg-gray-800 text-gray-400 py-8 text-center">
+      </div>
+    </section>
+
+    <section class="relative w-full min-h-[80vh] flex items-center overflow-hidden bg-black">
+      
+      <div class="absolute inset-0 w-full h-full flex justify-end z-0">
+        <video 
+          class="w-full md:w-3/4 h-full object-contain object-right opacity-60 pointer-events-none" 
+          autoplay loop muted playsinline
+          style="-webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%); mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%);"
+        >
+          <source src="/mi-landingpage/yolo-demo.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_20%,rgba(0,0,0,0)_80%,rgba(0,0,0,1)_100%)] z-10 pointer-events-none"></div>
+
+      <div class="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full">
+        <div class="max-w-2xl">
+          <div class="flex items-center space-x-3 mb-6">
+            <span class="w-3 h-3 bg-red-600 rounded-full animate-pulse"></span>
+            <span class="text-gray-300 font-mono text-sm tracking-wider">ESTADO: PROCESANDO FRAMES</span>
+          </div>
+          <h2 class="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
+            ARQUITECTURA DE <br/> VISIÓN COMPUTACIONAL.
+          </h2>
+          <p class="text-xl text-gray-300 font-light leading-relaxed mb-10">
+            El sistema descentraliza el procesamiento utilizando Nodos Locales. Mediante modelos avanzados de detección de objetos (YOLO), los espacios son evaluados en el origen (<strong class="text-white font-semibold">Edge Computing</strong>), transmitiendo únicamente matrices de texto con el estado de ocupación para evitar la saturación de la red institucional.
+          </p>
+          <ul class="space-y-4 text-lg text-gray-400">
+            <li class="flex items-center"><span class="text-blue-500 mr-4">▪</span> Anonimización por diseño: no se capturan rostros ni patentes.</li>
+            <li class="flex items-center"><span class="text-blue-500 mr-4">▪</span> Modelos predictivos de Machine Learning para estimar tendencias.</li>
+            <li class="flex items-center"><span class="text-blue-500 mr-4">▪</span> Despliegue de información mediante una Interfaz Web Mobile-First.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-16 text-center border-t border-gray-900 mt-20 relative z-20">
       <div class="max-w-4xl mx-auto px-6">
-        <p class="mb-2 font-medium text-gray-300">Proyecto desarrollado por Sergio Guzmán y Walter Meza.</p>
-        <p class="text-sm">Ingeniería En Ejecución En Computación E Informática - Facultad de Ciencias Empresariales.</p>
-        <p class="text-sm mt-2">Universidad del Bío-Bío.</p>
+        <p class="text-gray-500 font-light tracking-wide">
+          Proyecto de Título desarrollado por Sergio Guzmán y Walter Meza. <br/>
+          <span class="text-sm mt-2 block">Ingeniería en Ejecución en Computación e Informática - Facultad de Ciencias Empresariales.</span>
+        </p>
       </div>
     </footer>
+
+    <script>
+      const steps = document.querySelectorAll('.step-item');
+      const images = document.querySelectorAll('.sticky-img');
+
+      // Esto detecta cuando un bloque de texto llega al centro de la pantalla
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Oscurece los otros textos y resalta el actual
+            steps.forEach(s => s.classList.add('opacity-30'));
+            entry.target.classList.remove('opacity-30');
+
+            // Busca qué imagen corresponde a este texto y la muestra
+            const targetId = entry.target.getAttribute('data-target');
+            images.forEach(img => {
+              if (img.id === targetId) {
+                img.classList.remove('opacity-0');
+              } else {
+                img.classList.add('opacity-0');
+              }
+            });
+          }
+        });
+      }, { rootMargin: '-30% 0px -30% 0px' });
+
+      steps.forEach(step => observer.observe(step));
+    </script>
 
   </body>
 </html>
